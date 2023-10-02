@@ -1,0 +1,367 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --insurance-blue: #c7ddea;
+    --insurance-red: #f17949;
+    --insurance-orange: #ffb939;
+    --insurance-dark-grey: #777574;
+    --insurance-mid-grey: #a9a19e;
+    --insurance-light-grey: #ebebeb;
+}
+
+body {
+    background-color: var(--insurance-light-grey);
+}
+
+.content-wrapper {
+    max-width: 62.5rem;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 34rem 4.25rem 80.75rem 42.5rem 25.5rem;
+}
+
+.join-btn {
+    border: 0;
+    padding: 0.75rem 2.75rem;
+    margin-top: 3rem;
+    background-color: white;
+    color: rgb(0, 0, 0, 0.8);
+    border-radius: 1.5rem;
+    font-family: 'fira sans';
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.join-btn:hover {
+    background-color: rgb(0, 0, 0, 0.8);
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.hero {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(6, 1fr);
+}
+
+.hero section * {
+    text-align: center;
+}
+
+.hero .blue {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+    background-color: var(--insurance-blue);
+    background-image: url(./img/family.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position-x: 90%;
+    background-position-y: bottom;
+    padding: 4rem 6rem;
+}
+
+.hero .red {
+    grid-column: 4 / span 3;
+    background-color: var(--insurance-red);
+}
+
+.hero .red p {
+    margin-top: 6.5rem;
+}
+
+.hero .orange {
+    grid-column: 4 / span 3;
+    background-color: var(--insurance-orange);
+}
+
+.hero .orange p {
+    margin-top: 6.5rem;
+}
+
+.hero h2 {
+    color: white;
+    font-family: 'frank ruhl libre';
+    font-weight: 900;
+    font-size: 32px;
+}
+
+.hero .blue h2 {
+    color: black;
+    font-size: 45px;
+    line-height: 45px;
+    text-align: left;
+}
+
+.hero section p {
+    font-family: 'fira sans';
+    font-weight: 700;
+    font-size: 11px;
+    color: rgb(0, 0, 0, 0.5);
+}
+
+.hero .blue p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: left;
+    max-width: 16rem;
+    color:  rgb(0, 0, 0, 0.6);
+    margin-top: 1rem;
+}
+
+.cash {
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'fira sans';
+    font-weight: 600;
+    font-size: 12px;
+    color: rgb(0, 0, 0, 0.1);
+}
+
+nav a:hover {
+    color: black;
+    transition: 0.35s;
+}
+
+.current {
+    color: black;
+}
+
+main {
+    background-image: linear-gradient(
+        var(--insurance-mid-grey) 0%,
+        var(--insurance-mid-grey) 50%,
+        var(--insurance-orange) 50%,
+        var(--insurance-orange) 100%
+    );
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(6, 1fr);
+    padding: 6rem;
+}
+
+.header-button {
+    grid-column: 1 / span 3;
+}
+
+main h2 {
+    color: white;
+    max-width: 20rem;
+    font-family: 'frank ruhl libre';
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+main>p {
+    grid-column: 4 / span 3;
+    max-width: 17.5rem;
+    margin-left: 5rem;
+    font-family: 'fira sans';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(0, 0, 0, 0.6);
+}
+
+.card {
+    background-color: white;
+    height: 19.25rem;
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-family: 'frank ruhl libre';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(0, 0, 0, 0.9);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.card p {
+    font-family: 'fira sans';
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 18px;
+    color: rgb(0, 0, 0, 0.4);
+    text-align: center;
+    margin: 1rem;
+}
+
+.img-box {
+    height: 50%;
+    width: 90%;
+    margin: -1.5rem auto 0 auto;
+    border-radius: 4px;
+}
+
+.card:nth-child(3) {
+    grid-column: 1 / span 2;
+    margin: 1rem 0.8rem 0 0;
+}
+
+.card:nth-child(3) .img-box {
+    background-color: var(--insurance-blue);
+    background-image: url(./img/child.png);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position-x: center;
+    background-position-y: -60%;
+}
+
+.card:nth-child(4) {
+    grid-column: 3 / span 2;
+    margin: 1rem 0.4rem 0 0.4rem;
+}
+
+.card:nth-child(4) .img-box {
+    background-color: var(--insurance-orange);
+    background-image: url(./img/adult.png);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position-x: center;
+    background-position-y: -8%;
+}
+
+.card:nth-child(5) {
+    grid-column: 5 / span 2;
+    margin: 1rem 0 0 0.8rem;
+}
+
+.card:nth-child(5) .img-box {
+    background-color: var(--insurance-red);
+    background-image: url(./img/old.png);
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position-x: center;
+    background-position-y: -15%;
+}
+
+.about {
+    grid-column: 1 / span 6;
+}
+
+.about h2 {
+    max-width: 100%;
+    text-align: center;
+}
+
+.about p {
+    max-width: 27.625rem;
+    margin: 2rem auto 0 auto;
+    font-family: 'fira sans';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+aside {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(6, 1fr);
+}
+
+aside h2 {
+    font-family: 'frank ruhl libre';
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 900;
+    width: 15rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.numbered-card {
+    display: grid;
+    align-items: center;
+    padding: 2rem;
+}
+
+.numbered-card h3 {
+    font-family: 'frank ruhl libre';
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 35px;
+    color: rgb(0, 0, 0, 0.4);
+    align-self: flex-start;
+}
+
+.numbered-card p {
+    font-family: 'fira sans';
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0, 0.7);
+    width: 14rem;
+    margin: auto;
+    margin-bottom: 8rem;
+}
+
+
+.numbered-card:nth-child(1) {
+    background-color: var(--insurance-blue);
+    grid-column: 1 / span 2;
+}
+
+.numbered-card:nth-child(2) {
+    background-color: white;
+    grid-column: 3 / span 2;
+}
+
+.numbered-card:nth-child(3) {
+    background-color: var(--insurance-light-grey);
+    grid-column: 5 / span 2;
+}
+
+.numbered-card:nth-child(4) {
+    background-color: white;
+    grid-column: 1 / span 2;
+}
+
+.numbered-card:nth-child(5) {
+    background-color: var(--insurance-red);
+    grid-column: 3 / span 2;
+}
+
+.numbered-card:nth-child(6) {
+    background-color: white;
+    grid-column: 5 / span 2;
+}
+
+footer {
+    background-color: var(--insurance-dark-grey);
+}
+
+footer a {
+    display: block;
+    height: 4.25rem;
+    background-color: var(--insurance-mid-grey);
+    font-family: 'fira sans';
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    background-image: url(./img/chevrons-up.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
